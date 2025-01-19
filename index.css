@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #0f0f0f;
+}
+h2, h4{
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.comentarios{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.comentario{
+    background-color: #302f2f;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.comentario p{
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+.comentario h4{
+    font-weight: bolder;
+}
+p{
+    color: white;
+}
+h4 {
+    display: inline-block;
+}
+#contenedor{
+    width: 700px;
+}
+.publicacion{
+    margin-bottom: 80px;
+}
+.imgUsuario {
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    border-radius: 50%; 
+    font-weight: bold; 
+    font-size: 1rem; 
+}
+.contUsuario {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 5px; 
+    width: fit-content; 
+}
+ul{
+    color: white;
+}
