@@ -13,6 +13,8 @@ h2, h4{
     margin-top: 10px;
 }
 .comentario{
+    display: flex;
+    flex-direction: column;
     background-color: #302f2f;
     padding: 5px;
     margin-bottom: 10px;
@@ -57,3 +59,35 @@ h4 {
 ul{
     color: white;
 }
+.imgComentario {
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    border-radius: 50%; 
+    font-weight: bold; 
+    font-size: 1rem; 
+}
+.fotoComentario{
+    margin-right: 12px;
+}
+.like, .dislike{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+.textoComentario{
+    display: flex;
+}
+
+.footerComentario{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    color: white;
+    align-items: center ;
+}
+

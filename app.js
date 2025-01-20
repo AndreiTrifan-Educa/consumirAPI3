@@ -146,14 +146,59 @@ function renderizarComentarios(comentarios, contenedor) {
         const cuerpoPubComentario = document.createElement('div');
         cuerpoPubComentario.classList.add('comentario');
 
+        const textoComentario = document.createElement('div');
+        textoComentario.classList.add("textoComentario");
+
+        const fotoComentario = document.createElement('div');
+        fotoComentario.classList.add('fotoComentario');
+        const contenidoComentario = document.createElement('div');
+        contenidoComentario.classList.add('contenidoComentario');
+
+        const imgComentario = document.createElement('div');
+        const colorFondo = generarColorFondo();
+        imgComentario.style.backgroundColor = colorFondo;
+        imgComentario.classList.add('imgComentario');
+        imgComentario.style.cursor = 'pointer';
+
+        const letraComentario = document.createElement('span');
+        letraComentario.textContent = comentario.email.charAt(0);
+        imgComentario.appendChild(letraComentario);
+
+        fotoComentario.appendChild(imgComentario);
+        textoComentario.appendChild(fotoComentario);
+
         const nombre = document.createElement('h4');
         const username = comentario.email.split('@')[0];
         nombre.textContent = username;
-        cuerpoPubComentario.appendChild(nombre);
+        contenidoComentario.appendChild(nombre);
 
         const contenido = document.createElement('p');
         contenido.textContent = comentario.body;
-        cuerpoPubComentario.appendChild(contenido);
+        contenidoComentario.appendChild(contenido);
+
+        const footerComentario = document.createElement("div");
+
+        footerComentario.classList.add("footerComentario");
+
+        const like = document.createElement("img");
+        like.classList.add("like");
+        like.src="imagenes/like.png";
+        footerComentario.appendChild(like);
+
+        const dislike = document.createElement("img");
+        dislike.classList.add("dislike");
+        dislike.src="imagenes/dislike.png";
+        footerComentario.appendChild(dislike);
+
+        const responder = document.createElement("span");
+        responder.textContent="Responder";
+        footerComentario.appendChild(responder);
+        
+        contenidoComentario.appendChild(footerComentario);
+
+        textoComentario.appendChild(contenidoComentario);
+        cuerpoPubComentario.appendChild(textoComentario);
+
 
         contenedor.appendChild(cuerpoPubComentario);
     });
